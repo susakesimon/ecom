@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dieu Merci - Hoodies & Tees</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Bedfort&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="text-lg">
+    <header class="bg-white text-black shadow-md fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-4xl font-bold">Dieu Merci</a>
+            <div class="flex items-center">
+                <a href="#hoodies" class="text-black hover:text-gray-600 mx-3 text-xl">Hoodies</a>
+                <a href="#tees" class="text-black hover:text-gray-600 mx-3 text-xl">Tees</a>
+                <button id="cart-icon" class="ml-4 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-accent-blue text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-24">
+        <section class="text-center mb-16">
+            <h1 class="text-6xl font-bold mb-6">Dieu Merci</h1>
+            <p class="text-2xl text-gray-400">Elevate your style with our premium hoodies and tees</p>
+        </section>
+
+        <section id="filters" class="mb-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <label for="category-filter" class="mr-2">Category:</label>
+                    <select id="category-filter" class="border rounded p-2">
+                        <option value="all">All</option>
+                        <option value="hoodies">Hoodies</option>
+                        <option value="tees">Tees</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sort-by" class="mr-2">Sort by:</label>
+                    <select id="sort-by" class="border rounded p-2">
+                        <option value="name">Name</option>
+                        <option value="price-low-high">Price: Low to High</option>
+                        <option value="price-high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product items will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-20">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="mt-4">
+                <p class="text-xl font-bold">Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn" class="mt-4 w-full bg-accent-blue text-white font-bold py-2 px-4 rounded-full hover:opacity-90">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white text-black py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xl">&copy; 2024 Dieu Merci. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
